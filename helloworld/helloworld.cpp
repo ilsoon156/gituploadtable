@@ -7,7 +7,7 @@ using namespace eosio;
         using contract::contract;
 
         ACTION hi (name user){
-            check(has_auth(get_self() ) || has_auth("ispfirst1234"_n)), "Who are you?");
+            check(has_auth(get_self() ) || has_auth("ispfirst1234"_n), "Who are you?");
             //bool isTrue = has_auth(getself()) || has_auth("powerintel12"_n);
             /*check(has_auth(get_self() ), "Who are you?");
             require_auth("ispfirst1234"_n);
@@ -18,6 +18,15 @@ using namespace eosio;
             has_auth() -> true/false 반환*/
 
             print("hello, ", user);
+        }
+
+        ACTION getaccount(name user){
+            require_auth( get_self() );
+            print( is_account(user) );
+
+        ACTION gettimenow() {
+            
+        }
         }
 
     private:
