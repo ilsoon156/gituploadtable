@@ -10,6 +10,20 @@
                 {
                     "name": "user",
                     "type": "name"
+                },
+                {
+                    "name": "age",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "findage",
+            "base": "",
+            "fields": [
+                {
+                    "name": "age",
+                    "type": "uint64"
                 }
             ]
         },
@@ -30,6 +44,10 @@
                 {
                     "name": "user",
                     "type": "name"
+                },
+                {
+                    "name": "age",
+                    "type": "uint64"
                 }
             ]
         },
@@ -45,6 +63,11 @@
         }
     ],
     "actions": [
+        {
+            "name": "findage",
+            "type": "findage",
+            "ricardian_contract": ""
+        },
         {
             "name": "hi",
             "type": "hi",
@@ -63,7 +86,7 @@
     ],
     "tables": [
         {
-            "name": "allowance",
+            "name": "allowance2",
             "type": "allowance",
             "index_type": "i64",
             "key_names": [],

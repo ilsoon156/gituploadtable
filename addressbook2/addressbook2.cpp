@@ -84,6 +84,8 @@ CONTRACT addressbook: public contract {
 
             uint64_t primary_key() const {return user.value;} //primarykey는 64로 약속
         };
+
+        void
     
     typedef multi_index<"people2"_n , person> address_index;
 };
